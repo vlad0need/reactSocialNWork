@@ -1,0 +1,13 @@
+.friends img{
+    width: 40px;
+    border-radius: 50%;
+}
+.friends{
+
+display: flex;
+}
+.item{
+    margin: 3px;
+    text-align: center;
+    font-size: 13px;
+}

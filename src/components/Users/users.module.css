@@ -1,0 +1,11 @@
+.userPhoto {
+    width: 100px;
+    height: 100px;
+}
+.setPages{
+    text-align: center;
+}
+.selectedPage{
+    cursor: pointer;
+    font-weight: bold;
+}
