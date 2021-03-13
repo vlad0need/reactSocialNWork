@@ -1,6 +1,17 @@
 .header {
     grid-area: h;
     background-color: #4d6da9;
+    display: flex;
+    justify-content: space-between;
+}
+.loginBlock{
+    margin-right: 40px;
+    margin-top: 10px;
+
+}
+.loginBlock a{
+    color: azure;
+    text-decoration: none;
 }
 .header img{
     width: 114px;
