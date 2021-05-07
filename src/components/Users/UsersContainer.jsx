@@ -15,13 +15,15 @@ import {
     getFollowingInProgress,
     getIsFetching,
     getPageSize,
-    getTotalUsersCount, getUsers, getUsersSuperSelector
+    getTotalUsersCount, getUsers,
 } from "../../redux/users-selector";
 
 
 class UsersAPIComponent extends React.Component {
     componentDidMount() {
-        this.props.getUsers(this.props.currentPage, this.props.pageSize);
+        const {currentPage, pageSize,} = this.props
+        this.props.getUsers(currentPage, pageSize);
+
        /* this.props.toggleIsFetching(true);
 
         usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
@@ -32,8 +34,8 @@ class UsersAPIComponent extends React.Component {
     }
 
     onPageChanged = (pageNumber) => {
-
-        this.props.getUsers(pageNumber, this.props.pageSize);
+        const {pageSize} = this.props
+        this.props.getUsers(pageNumber, pageSize);
 
         /*this.props.toggleIsFetching(true);
         this.props.setCurrentPage(pageNumber);
@@ -64,7 +66,7 @@ class UsersAPIComponent extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        users: getUsersSuperSelector(state),
+        users: getUsers(state),
         totalUsersCount: getTotalUsersCount(state),
         pageSize: getPageSize(state),
         currentPage: getCurrentPage(state),

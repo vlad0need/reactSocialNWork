@@ -1,0 +1,15 @@
+.selectedPage{
+    font-weight: bold;
+}
+.setPages{
+    text-align: center;
+    margin-top: 5px;
+}
+.setPages span{
+   padding: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.setPages span:hover{
+    background-color: #4d6da9;
+}

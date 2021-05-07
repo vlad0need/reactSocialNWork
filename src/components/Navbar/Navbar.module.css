@@ -1,17 +1,35 @@
 .nav{
     grid-area: n;
     background-color: #4d6da9;
-    padding: 20px;
+
 }
 .nav div{
-    width: 100%;
-    margin-bottom: 15px;
+
+}
+.item {
+
+    height: 40px;
+    border: #4d6da9 solid 1px;
+    align-items: center;
 }
 .item a{
     color: rgb(28, 30, 33);
     text-decoration: none;
     font-weight: 500;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
 }
 .item a.activelink{
     color: #ebedf4;
+}
+.item:hover .activelink{
+    color: rgb(28, 30, 33);
+}
+.item:hover {
+    background-color: #d1dce9;
+    border: black solid 1px;
 }

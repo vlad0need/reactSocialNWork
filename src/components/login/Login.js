@@ -37,6 +37,7 @@ const LoginReduxForm =  reduxForm({form: 'login'})(LoginForm)
 const Login = (props) => {
     const onSubmit = (formData) => {
         props.login(formData.email, formData.password, formData.rememberMe)
+        console.log(formData)
     }
     if (props.isAuth){
         return <Redirect to={"/profile"} />

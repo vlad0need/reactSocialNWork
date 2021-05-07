@@ -1,24 +1,18 @@
 import s from './ProfileInfo.module.css';
 import Preloader from "../../common/Preloader/Preloader";
-import ProfileStatus from "./ProfileStatus"
 import userPhoto from "../../../assets/img/user_no_photo.png";
 import ProfileStatusHooks from "./ProfileStatusHooks";
 
-const ProfileInfo = (props) => {
-    if (!props.profile){
+const ProfileInfo = ({profile, updateStatus, status}) => {
+    if (!profile){
         return <Preloader/>
     }
     return (
         <div>
-            {/*<div>
-                <img className={s.wallpaper}
-                    src='https://proprikol.ru/wp-content/uploads/2020/03/sinij-czvet-krasivye-kartinki-1.jpg'
-                    alt=""/>
-            </div>*/}
             <div className={s.descriptionBlock}>
-                <img className={s.ava} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt=""/>
+                <img className={s.ava} src={profile.photos.large != null ? profile.photos.large : userPhoto} alt=""/>
                 ava+description
-                <ProfileStatusHooks status={props.status} updateStatus={props.updateStatus} />
+                <ProfileStatusHooks status={status} updateStatus={updateStatus} />
             </div>
         </div>
     );

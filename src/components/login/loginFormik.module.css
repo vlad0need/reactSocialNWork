@@ -1,0 +1,13 @@
+.formSummaryError{
+   color: red;
+}
+.formControl{
+    display: block;
+    margin: 4px;
+}
+.btn{
+    margin-left: 4px;
+}
+.formControl.error{
+    border-color: red;
+}
